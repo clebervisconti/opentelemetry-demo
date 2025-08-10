@@ -1,0 +1,12 @@
+http_listen_addr: 0.0.0.0:6060
+introspection_addr: 0.0.0.0:6061
+log_level: debug-color
+indexer:
+  connstring: "host=postgresql port=5432 user=otelu password=otelp dbname=indexer sslmode=disable"
+  scanlock_retry: 10
+  layer_scan_concurrency: 5
+  migrations: true
+  airgap: false
+matcher:
+  connstring: "host=postgresql port=5432 user=otelu password=otelp dbname=matcher sslmode=disable"
+  migrations: true
